@@ -2,16 +2,18 @@
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
-  --hero-title: #ffffff;
   --adress-footer: rgba(255, 255, 255, 0.6);
-  --primary-background-color: #ffffff;
+  --primary-white-color: #ffffff;
   --secondary-background-color: #2f303a;
   --section-background-color: #f5f4fa;
 }
 
 body {
-  background-color: var(--primary-background-color);
+  background-color: var(--primary-white-color);
   color: var(--primary-text-color);
+
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
 }
 
 .list {
@@ -22,14 +24,24 @@ body {
 
 .logo {
   color: var(--accent-color);
+  font-family: Raleway, sans-serif;
+
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
 }
 
-.logo-part {
+.logo-nav {
   color: var(--title-text-color);
 }
 
+.logo-footer {
+  color: var(--primary-white-color);
+}
+
 .logo:hover,
-.logo-part:hover {
+.logo-nav:hover,
+.logo-footer:hover {
   color: var(--accent-color);
 }
 
@@ -37,6 +49,11 @@ body {
 
 .site-nav .link {
   color: var(--title-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 .site-nav .link:hover,
@@ -52,6 +69,11 @@ body {
 
 .adress-nav .link {
   color: var(--primary-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
 }
 
 .adress-nav .link:hover,
@@ -66,26 +88,78 @@ body {
 }
 
 .hero-title {
-  color: var(--hero-title);
+  color: var(--primary-white-color);
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.39;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
-.button {
-  color: var(--hero-title);
-  background: var(--accent-color);
+
+/* Кнопка героя */
+
+.button-hero {
+  color: var(--primary-text-color);
+  background-color: var(--primary-white-color);
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.button-hero.primary {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+.button-hero.primary:hover,
+.button.primary:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+.button-hero.secondary {
+  color: var(--title-text-color);
+  background-color: var(--primary-white-color);
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 /* section */
 
 .section-title {
   color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
 }
 
 /* features */
 
 .features .features-title {
   color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .features-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 /* workers */
@@ -93,9 +167,16 @@ body {
 .workers .workers-title {
   background-color: var(--section-background-color);
   color: var(--title-text-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .workers-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.9;
 }
 
 /* footer */
@@ -104,11 +185,80 @@ body {
   background-color: var(--secondary-background-color);
 }
 
+.adress-text {
+  color: var(--primary-white-color);
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 .adress-footer .link {
   color: var(--adress-footer);
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .adress-footer .link:hover,
 .adress-footer .link:focus {
   color: var(--accent-color);
+}
+
+/* Портфоліо */
+
+/* filter */
+
+.filter-nav .link {
+  color: var(--accent-color);
+}
+
+.examples .examples-title {
+  background-color: var(--primary-white-color);
+  color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.examples-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+}
+
+/* button filter */
+
+.button-filter {
+  color: var(--primary-text-color);
+  background-color: var(--primary-white-color);
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.button-filter.primary {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+.button-filter.primary:hover,
+.button-filter.primary:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+.button-filter.secondary {
+  color: var(--title-text-color);
+  background-color: var(--primary-white-color);
 }
